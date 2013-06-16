@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+  <name>BootstrapGallery</name>  
+  <author>Fabian Manzano</author>
+  <creationDate>December 2012</creationDate>
+  <copyright>Copyright (C)2012 Fabian Manzano</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <authorEmail>manzanofab@hotmail.com</authorEmail>
+  <authorUrl>www.fabianmanzano.info</authorUrl>
+  <version>1.0</version>
+  <description>Easy start for module creation</description>
+
+<updateservers> 
+<server 
+ type="extension" 
+ priority="1" 
+ name="BootstrapGallery">
+http://projects.fabianmanzano.info/mod_BootstrapGallery.xml</server>
+</updateservers>
+
+  <files>
+    <filename module="mod_BootstrapGallery">mod_BootstrapGallery.php</filename>
+    <filename>index.html</filename>
+	<filename>helper.php</filename>
+	<filename>mod_BootstrapGallery.php</filename>
+	<filename>mod_BootstrapGallery.xml</filename>
+	<folder>extras</folder>
+	<folder>language</folder>
+	<folder>tmpl</folder>
+  </files>
+  <config>
+		<fields name="params">
+			<fieldset name="basic" addrulepath="modules/mod_joompro_articles_author">
+<field
+                        name="folder"
+                        type="text"
+                        label="MOD_BootstrapGallery_FOLDER_SELECTION"
+                        description="MOD_BootstrapGallery_FOLDER_SELECTION_DESC"
+                        size="40"
+                        class="inputbox validate-greeting"
+                        required="true"
+                        default=""
+                />
+				<field
+                        name="size"
+                        type="text"
+                        label="MOD_BootstrapGallery_THUMBNAILSIZE_SELECTION"
+                        description="MOD_BootstrapGallery_THUMBNAILSIZE_SELECTION_DESC"
+                        size="40"
+                        class="inputbox validate-greeting"
+                        required="true"
+                        default=""
+                />				
+<field
+					name="jquery"
+					type="radio"
+					default="1"
+					label="MOD_BOOTSTRAPGALLERY_JQUERY_LOAD"
+					description="MOD_BOOTSTRAPGALLERY_JQUERY_LOAD_DESC">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				
+<field
+					name="bmin"
+					type="radio"
+					default="1"
+					label="MOD_BOOTSTRAPGALLERY_BMIN_LOAD"
+					description="MOD_BOOTSTRAPGALLERY_BMIN_LOAD_DESC">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" 
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" 
+				description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+
